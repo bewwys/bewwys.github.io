@@ -1,0 +1,58 @@
+// <nav class="main-nav h-56px w-100p bg-fffbf0 dflex fd-row fjc-sb fai-center px-8px bx-sz-bb">
+//     <div class="w-33p">
+//         <button class="pr-16px"><img src="./public/img/menu_icon.svg" alt=""></button>
+//         <button class="pr-16px"><img src="./public/img/home_icon.svg" alt=""></button>
+//         <button><img src="./public/img/search_icon.svg" alt=""></button>
+//     </div>
+//     <div class="w-33p "><button><img src="./public/img/add_icon.svg" alt=""></button></div>
+//     <div class="w-33p">
+//         <button class="pr-8px"><img src="./public/img/check_icon.svg" alt=""></button>
+//         <button class="pr-8px"><img src="./public/img/bell_icon.svg" alt=""></button>
+//         <button><img src="./public/img/user_icon.svg" alt=""></button>
+//     </div>
+// </nav>
+
+
+/* <div class="task">
+    <!-- For now the checkbox is inactive. It just here for decoration hehehe -->
+    <div class="dflex fgap-12px">
+        <div class="checkbox wh-28px brr-max br-solid br-2px br-color-75 bg-fffbf0 bx-sz-bb fshrink-0 mt-5px"></div>
+        <div class="task-title">Ok je mange beaucoup de viande mais c'est trop bon.</div>
+    </div>
+    <div class="t-alg-r mt-5px ft-10px fc-75">Boite de reception</div>
+    <hr>
+</div> */
+
+/* <div class="main-section pl-56px pr-16px mt-34px bx-sz-bb">
+        <div class="main-feature dflex fjc-sb mb-34px">
+            <p class="fw-medium"><span class="pr-15px fw-medium">Aujourd'hui</span><span class="fz-10px fc-75 fw-regular">nov</span></p>
+            <button class="mt-5px"><img src="./public/img/settings_icon.svg" alt=""></button>
+        </div>
+        <div class="tasks">
+            <div class="task">
+                <!-- For now the checkbox is inactive. It just here for decoration hehehe -->
+                <div class="dflex fgap-12px">
+                    <div class="checkbox wh-28px brr-max br-solid br-2px br-color-75 bg-fffbf0 bx-sz-bb fshrink-0 mt-5px"></div>
+                    <div class="task-title">Ok je mange beaucoup de viande mais c'est trop bon.</div>
+                </div>
+                <div class="t-alg-r mt-5px ft-10px fc-75">Boite de reception</div>
+                <hr>
+            </div>
+            <div class="task">
+                <!-- For now the checkbox is inactive. It just here for decoration hehehe -->
+                <div class="dflex fgap-12px">
+                    <div class="checkbox wh-28px brr-max br-solid br-2px br-color-75 bg-fffbf0 bx-sz-bb fshrink-0 mt-5px"></div>
+                    <div class="task-title">Ok je mange beaucoup de viande mais c'est trop bon.</div>
+                </div>
+                <div class="t-alg-r mt-5px ft-10px fc-75">Boite de reception</div>
+                <hr>
+            </div>
+            <div class="add-task">
+                <!-- For now the checkbox is inactive. It just here for decoration hehehe -->
+                <div class="dflex fgap-12px">
+                    <button class="checkbox wh-28px brr-max bx-sz-bb fshrink-0 mt-5px"><img src="./public/img/add_icon.svg" alt=""></button>
+                    <div class="task-title ft-10px fc-FF0000">Ajouter une tâche</div>
+                </div>
+            </div>
+        </div>
+</div> */

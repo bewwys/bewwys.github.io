@@ -1,0 +1,10 @@
+<svg id="Add" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #010101;
+      }
+    </style>
+  </defs>
+  <path id="Add-2" data-name="Add" class="cls-1" d="M16.15,2.15a2.15,2.15,0,1,0-4.3,0v9.7H2.15a2.15,2.15,0,1,0,0,4.3h9.7v9.7a2.15,2.15,0,1,0,4.3,0v-9.7h9.7a2.15,2.15,0,0,0,0-4.3h-9.7Z"/>
+</svg>

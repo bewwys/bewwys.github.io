@@ -1,0 +1,454 @@
+/* RESET START */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+* {
+    word-wrap: break-word;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+textarea {
+    resize: none;
+}
+/* RESET END */
+
+/* START FONTS */
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/roboto/Roboto-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/roboto/Roboto-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.ff-roboto {
+    /* Needs to add fallback */
+    font-family: Roboto;
+}
+
+.fw-regular {
+    font-weight: normal;
+}
+
+.fw-medium {
+    font-weight: 500;
+}
+
+.ft-10px {
+    font-size: 10px;
+}
+
+.ft-32px {
+    font-size: 32px;
+}
+
+/* END FONTS */
+
+/* BUTTON DEFAULT STYLE */
+button {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+/* BUTTON DEFAULT STYLE END */
+
+/* BORDERS */
+
+/* CHECK BOX DEFAULT STYLE */
+/* CHECK BOX DEFAULT STYLE END */
+
+.br-none {
+    border: none;
+}
+
+.brr-5px {
+    border-radius: 5px;
+}
+
+.brr-max {
+    border-radius: 100%;
+}
+.br-solid {
+    border-style: solid;
+}
+
+.br-0 {
+    border-width: 0;
+}
+
+.br-1px {
+    border-width: 1px;
+}
+
+.br-2px {
+    border-width: 2px;
+}
+
+.br-color-ffeec3 {
+    border-color: #ffeec3;
+}
+
+.br-color-75 {
+    border-color: #757575;
+}
+
+.br-color-ffba {
+    border-color: #ffbaba;
+}
+
+.br-color-d3ffda {
+    border-color: #D3FFDA;
+}
+
+/* BORDERS END */
+
+/* LAYOUT */
+
+/* bx-sz-bb: stand for box sizing border box */
+.bx-sz-bb {
+    box-sizing: border-box;
+}
+
+/* 
+ fjc-{}: stand for flex justify content
+ sb    : stand for space between
+ dflex : stand for display
+ fd    : stand for flex direction
+ fai   : stand for flex align items
+*/
+
+.dflex {
+    display: flex;
+}
+
+.fd-row {
+    flex-direction: row;
+}
+
+.fjc-sb {
+    justify-content: space-between;
+}
+
+.fai-center {
+    align-items: center;
+}
+
+.fgap-12px {
+    gap: 12px;
+}
+
+.fshrink-0 {
+    flex-shrink: 0;
+}
+
+.dblock {
+    display: block;
+}
+
+.dnone {
+    display: none;
+}
+
+/* LAYOUT END */
+
+/* SIZING */
+
+.h-1px {
+    height: 1px;
+}
+
+.h-56px {
+    height: 56px;
+}
+
+.h-140px {
+    height: 140px;
+}
+
+.w-100p {
+    width: 100%;
+}
+.w-33p_ {
+    width: calc(100% / 3);
+}
+
+.wh-28px {
+    width: 28px;
+    height: 28px;
+}
+/* SIZING END */
+
+/* SPACING */
+.p-0px {
+    padding: 0px;
+}
+
+.px-8px {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.px-16px {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.px-19px {
+    padding-left: 19px;
+    padding-right: 19px;
+}
+
+.py-16px {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.py-24px {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.pt-16px {
+    padding-top: 16px;
+}
+
+.pl-8px {
+    padding-left: 8px;
+}
+
+.pl-39px {
+    padding-left: 39px;
+}
+
+.pl-56px {
+    padding-left: 56px;
+}
+
+.pt-16px {
+    padding-top: 16px;
+}
+
+.pr-8px {
+    padding-right: 8px;
+}
+
+
+
+.pr-16px {
+    padding-right: 16px;
+}
+
+.pr-9px {
+    padding-right: 9px;
+}
+
+.pr-19px {
+    padding-right: 19px;
+}
+
+.pr-15px {
+    padding-right: 15px;
+}
+
+.pr-41px {
+    padding-right: 41px;
+}
+
+.pb-10px {
+    padding-bottom: 10px;
+}
+
+.m-0px {
+    margin: 0px;
+}
+
+.my-8px {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.mr-8px {
+    margin-right: 8px;
+}
+
+.mr-10px {
+    margin-right: 10px;
+}
+
+.mr-12px {
+    margin-right: 12px;
+}
+
+.mt-2px {
+    margin-top: 2px;
+}
+
+.mt-5px {
+    margin-top: 5px;
+}
+
+.mt-28px {
+    margin-top: 28px;
+}
+
+.mt-34px {
+    margin-top: 34px;
+}
+
+.mb-8px {
+    margin-bottom: 8px;
+}
+
+.mb-14px {
+    margin-bottom: 14px;
+}
+
+.mb-34px {
+    margin-bottom: 34px;
+}
+/* SPACING END */
+
+/* COLOR */
+.bg-fffbf0 {
+    background-color: #fffbf0;
+}
+
+.bg-f0fff2 {
+    background-color: #f0fff2;
+}
+
+.bg-ffeec3 {
+    background-color: #ffeec3;
+}
+
+.bg-e9 {
+    background-color: #E9E9E9;
+}
+
+.bg-75 {
+    background-color: #757575;
+}
+
+.bg-87BBA2 {
+    background-color: #87BBA2;
+}
+
+.bg-ffdede {
+    background-color: #FFDEDE;
+}
+
+.fc-cd9300 {
+    color: #cd9300;
+}
+
+.fc-ff {
+    color: white;
+}
+
+.fc-75 {
+    color: #757575;
+}
+
+.fc-FF0000 {
+    color: #FF0000;
+}
+
+.fc-ff57 {
+    color: #ff5757;
+}
+
+.fc-ffba {
+    color: #ffbaba;
+}
+
+.fc-00ac1b {
+    color: #00ac1b;
+}
+
+.ft-16px {
+    font-size: 16px;
+}
+
+/* COLOR END */
+
+/* APP */
+
+.main-nav {
+    color: blue;
+}
+ 
+/* APP END */
+
+/* TEXT */
+.t-alg-r {
+    text-align: right;
+}
+/* TEXT END */
+
+/* ANIMATION AND FANCY STUFF */
+/* Because animating stuff is not my priority i'm doing this shit here */
+.fade {animation:fade-in 0.5s;}
+@keyframes fade-in {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+
+.exit {animation:fade-out 0.160s;}
+@keyframes fade-out {
+    from {opacity:1;}
+    to {opacity:0;}
+}
+/* ANIMATION AND FACY STUFF END */

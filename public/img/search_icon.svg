@@ -1,0 +1,10 @@
+<svg id="Search" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #010101;
+      }
+    </style>
+  </defs>
+  <path id="Search-2" data-name="Search" class="cls-1" d="M22.75,11.37a11.3,11.3,0,0,1-2.19,6.71L27.49,25A1.75,1.75,0,0,1,25,27.49l-6.92-6.93a11.38,11.38,0,1,1,4.66-9.19ZM11.38,19.25A7.88,7.88,0,1,0,3.5,11.37,7.88,7.88,0,0,0,11.38,19.25Z" transform="translate(0 0)"/>
+</svg>
