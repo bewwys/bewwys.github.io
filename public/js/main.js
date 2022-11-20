@@ -1,38 +1,68 @@
+// TODO(): I want to animate something but as always css suck.
+//         Time to move on on absolute position and transform animation
+//         We need to shrink the height of the task container based on
+//         The number of tasks
+
 let current_date = new Date();
-let day = current_date.getDay();
+let day = current_date.getDate();
 let month = current_date.getMonth();
+let year = current_date.getFullYear();
+
+// console.log(current_date.toLocaleDateString())
+
+/*
+Task format:
+
+{
+    id,
+    title,
+    description,
+    due_date,
+    priority,
+    date_creation
+}
+*/
 
 let tasks = [
     
 ];
 
-function do_task(task) {
-    return m("div.task",[
+let task_height = 65;
+let current_task_index;
+let current_node;
+let task_position = 0;
+
+// TODO(): Ok I think I know what's going on. But lazyness is the friend of the lazy person.
+function do_task(task, index) {
+    let previous_task_position = task_position;
+    task_position = index * task_height;
+    return m(`div#id-${task.id}.task.absolute[style='transform:translateY(${task_position}px)'][position='${task_position}'].animate-translate-top-60px`, {
+        onbeforeupdate: function(newVnode, oldVnode) {
+        },
+        onupdate: function(vnode) {
+        },
+        onbeforeremove: function (e) {
+
+        },
+        onclick: function(e) {
+        }
+    },
+    [
         m("div.dflex fgap-12px", [
             m(`div#check-for-${task.id}.checkbox.wh-28px.brr-max.br-solid.br-2px.br-color-75.bg-fffbf0.bx-sz-bb.fshrink-0.mt-5px`, {
                 onclick: function(e) {
-                    let check = e.target;
-                    console.log(e.target);
-                    console.log("exit -> " + task.id);
-                    // INVESTIGATE(): Why we need to add and remove the class exit ?
-                    //                When we rerender this thing I was expecting that the position
-                    //                of the task in the list doesn't matter but somehow
-                    //                if we clicked and remove a task at let say index 0 then
-                    //                the task at index 1 which is now at index 0 keep the class exit
-                    //                of the previous deleted task at index 0.
-                    check.classList.add("exit");
-                    // check.addEventListener("animationend", function() {
-                    //     
-                    // });
-                },
-                onanimationend: function (e) {
-                    // TODO(): Because the animation take a certain amount of time we are in a situation where
-                    //         the ids are wrongs.
-                    console.log("the task removed is: " + task.id);
-                    let check = e.target;
-                    check.classList.remove("exit");
-                    let index = tasks.findIndex((taskouille) => taskouille.id === task.id);
-                    tasks.splice(index, 1);
+                    for (let sub_index = index; sub_index < tasks.length; sub_index++) {
+                        let task_node   = document.getElementById(`id-${tasks[sub_index].id}`);
+                        let newPosition = task_node.getAttribute("position") - 65;
+                        console.log(newPosition);
+                        console.log(task_node);
+                        task_node.style.transform = `translateY(${newPosition}px)`; //
+                        console.log(task_node.style.transform)
+                    }
+                    // let index = tasks.findIndex((taskouille) => taskouille.id === task.id);
+                    // console.log("Tu as cliqué sur l'élément avec l'index " + index);
+                    // current_task_index = tasks.findIndex((taskouille) => taskouille.id === task.id);
+                    // tasks.splice(index, 1);
                 }
             }),
             m("div.task-title", {innerHTML: task.title})
@@ -50,7 +80,16 @@ function do_icon_button(padding_right, img_src ="\'\'") {
 
 let counter = 0;
 function add_task(title) {
-    tasks.push({id: tasks.length, title: title, done:0});
+    tasks.push({
+        id: tasks.length,
+        title: title,
+        done:0,
+        data_creation: {
+            year: year,
+            day: day,
+            month: month + 1
+        }
+    });
 }
 
 let app = {
@@ -77,12 +116,16 @@ let app = {
                     ]),
                     m("button.mt-5px", m("img[src='./public/img/settings_icon.svg']"))
                 ]),
-                tasks.length > 0 ? m("div.tasks", [
-                    tasks.map(function(task) {
-                        return do_task(task);
+                tasks.length > 0 ? m("div.tasks.relative#tasks", [
+                    tasks.map(function(task, index) {
+                        let tasks_dom = document.getElementById("tasks");
+                        if (tasks_dom !== null) {
+                            tasks_dom.style.height = (tasks.length * task_height) + "px";
+                        }
+                        return do_task(task, index);
                     })
-                ]): m("p.mb-8px.pl-39px", {innerHTML:"Aucune tâche"}, m("div.h-1px.bg-e9 my-8px")),
-                m("div#add-task.add-task", [
+                ]): m("p.mb-8px.pl-39px.mt-28px", {innerHTML:"Aucune tâche"}, m("div.h-1px.bg-e9 my-8px")),
+                m("div#add-task.add-task mt-28px", [
                     m("div.dflex.fgap-12px", [
                         m("button#add-task-btn.checkbox.wh-28px.brr-max.bx-sz-bb.fshrink-0.mt-5px", {onclick: function(){
                             let btn = document.getElementById("add-task");
@@ -98,7 +141,9 @@ let app = {
                 m("div#taskmodal.dnone.t-alg-r", [
                     // TODO(): There is a bug with word wrapping. Low priority task i don't care.
                     //         To reproduce the bug just add a long word like just repeating the same char.
-                    m("textarea#task-area.fc-cd9300.w-100p.dblock.mb-14px[rows=8].br-1px.br-solid.brr-5px.br-color-ffeec3.h-140px.bg-fffbf0.mt-28px.pl-39px.bx-sz-bb.pt-16px.ft-16px.ff-roboto"),
+                    m("div.bogosse.bg-fffbf0", [
+                        m("textarea#task-area.fc-cd9300.w-100p.dblock.mb-14px[rows=8].br-1px.br-solid.brr-5px.br-color-ffeec3.h-140px.bg-fffbf0.mt-28px.pl-39px.bx-sz-bb.pt-16px.ft-16px.ff-roboto"),
+                    ]),
                     m("button.brr-5px.bg-ffdede.pl-8px.pr-41px.pb-10px.pt-16px.fc-ff57.mr-10px br-1px br-solid br-color-ffba", {innerHTML:"Annuler", onclick:function(){
                         let taskmodal = document.getElementById("taskmodal");
                         taskmodal.classList.add("dnone");
